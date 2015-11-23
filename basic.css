@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+.debugText {
+    z-index: 1000;
+    position: absolute;
+    left: 3px;
+    top: 10px;
+    max-width: 100px;
+}
