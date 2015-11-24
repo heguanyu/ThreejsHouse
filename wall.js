@@ -24,15 +24,17 @@ gBuilding.wallUtil = {
             dir: 'images/paintedwall.jpg',
             repeatX: Math.max(Math.floor(width/500), 1),
             repeatY: Math.max(Math.floor(height/500), 1),
-            uvMapping: uvMapping
+            uvMapping: uvMapping,
+            castShadow: true,
+            receiveShadow: false
         }
     },
 
     addFrontBackWall: function(scene,width, height, posx,posy, posz,textureInfo) {
-        return gBuilding.wallUtil.addPlane(scene,width, height, new THREE.Vector3(posx, posy, posz), new THREE.Vector3(0,0,0), textureInfo);
+        return gBuilding.wallUtil.addPlane(scene,width, height, new THREE.Vector3(posx, posy, posz), new THREE.Vector3(0,0,0), _.extend(textureInfo || {}, {castShadow: true, receiveShadow: false}));
     },
     addLeftRightWall: function(scene,width, height, posx,posy, posz ,textureInfo) {
-        return gBuilding.wallUtil.addPlane(scene,width, height,  new THREE.Vector3(posx, posy, posz), new THREE.Vector3(0, Math.PI/2, 0), textureInfo);
+        return gBuilding.wallUtil.addPlane(scene,width, height,  new THREE.Vector3(posx, posy, posz), new THREE.Vector3(0, Math.PI/2, 0), _.extend(textureInfo || {}, {castShadow: true, receiveShadow: false}));
     },
     addFloorCeiling: function(scene,width, length,  posx, posy, posz,textureInfo) {
         return gBuilding.wallUtil.addPlane(scene,width, length,  new THREE.Vector3(posx, posy, posz), new THREE.Vector3(Math.PI/2, 0, 0), textureInfo);
@@ -73,6 +75,8 @@ gBuilding.wallUtil = {
         }
         var plane = new THREE.Mesh(planeGeometry, material);
         var dummy = new THREE.Object3D();
+        plane.castShadow = textureInfo.castShadow;
+        plane.receiveShadow = textureInfo.receiveShadow;
         plane.applyMatrix( new THREE.Matrix4().makeTranslation( translation.x, translation.y, translation.z ) );
         dummy.add( plane );
         dummy.rotation.set(rotation.x, rotation.y, rotation.z);

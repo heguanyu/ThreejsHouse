@@ -28,7 +28,7 @@ function init()
     scene = new THREE.Scene();
     // CAMERA
     var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight;
-    var VIEW_ANGLE = 45, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 10000;
+    var VIEW_ANGLE = 75, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 10000;
     camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
     scene.add(camera);
     resetCamera();
@@ -38,6 +38,11 @@ function init()
     else
         renderer = new THREE.CanvasRenderer();
     renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+    //SHADOW MAP
+    renderer.shadowMapEnabled = true;
+    renderer.shadowMapType = THREE.PCFSoftShadowMap;
+    renderer.shadowMapDebug = true;
+
     container = document.getElementById( '_myCanvas' );
     container.appendChild( renderer.domElement );
     debugText = document.getElementById( '_debugText' );
@@ -57,13 +62,23 @@ function init()
     container.appendChild( stats.domElement );
 
     // LIGHT
-    var light = new THREE.AmbientLight( 0x606060 ); // soft white light
-    scene.add( light );
+    var ambientLight = new THREE.AmbientLight( 0x303030 ); // soft white light
+    scene.add( ambientLight );
+
+    var sunLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+    sunLight.position.set( 300, 1000, -500 );
+    sunLight.castShadow = true;
+    sunLight.shadowDarkness = 1;
+    sunLight.shadowCameraVisible = true;
+    scene.add( sunLight );
+
     //addPointLight(new THREE.Vector3(0,150,0), 0, 0xffffff, 0.1, 4000);
     gBuilding.wallUtil.addFloorCeiling(scene, houseInfo.width, houseInfo.length, 0, 0, 0, {
         dir: "images/jade.jpg",
         repeatX: 10,
-        repeatY: 10
+        repeatY: 10,
+        castShadow: false,
+        receiveShadow: true
     });
     // SKYBOX/FOG
     var skyBoxGeometry = new THREE.BoxGeometry( 10000, 10000, 10000 );
