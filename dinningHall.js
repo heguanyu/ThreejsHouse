@@ -15,7 +15,8 @@ function prepareDiningHall() {
 
     var dockX = houseInfo.width/2;
     // backwall, has window
-    gBuilding.wallUtil.addWallWithWindow(scene, roomWidth,roomHeight,dockX, -houseInfo.length/2, {
+
+    gBuilding.wallUtil.addWallWithWindow1(scene, roomWidth,roomHeight,new THREE.Vector3((houseInfo.width - roomWidth)/2, roomHeight/2, -houseInfo.length/2), new THREE.Vector3(0,0,0), {
         left: 60,
         right: 90,
         top: 60,

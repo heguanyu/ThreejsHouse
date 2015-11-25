@@ -36,12 +36,12 @@ function preparePlayRoom() {
     gBuilding.wallUtil.addWallWithWindow1(scene, wall2Width,roomHeight, new THREE.Vector3((-houseInfo.width + wall2Width)/2 + wall1Width, roomHeight/2, houseInfo.length/2), new THREE.Vector3(Math.PI, 0, Math.PI), doorPaddings);
     gBuilding.wallUtil.addLeftRightWall(scene, roomDepth, roomHeight, -houseInfo.width/2, roomHeight/2, houseInfo.length/2 - roomDepth/2, gBuilding.wallUtil.getWallTexture(roomDepth, roomHeight));
 
-    gBuilding.wallUtil.addPlaneRotateByEdge(
+    gBuilding.wallUtil.addPlaneRotateByCenter(
         scene,
         doorWidth,
         doorHeight,
-        new THREE.Vector3(-houseInfo.width/2 + wall1Width, doorHeight/2, houseInfo.length/2),
-        new THREE.Vector3(doorWidth/2, 0, 0),
+        5,
+        new THREE.Vector3(-houseInfo.width/2 + wall1Width + doorWidth / 2 / 1.414, doorHeight/2, houseInfo.length/2 - doorWidth / 2 / 1.414),
         new THREE.Vector3(0,Math.PI * 1 /4, 0), {
             dir: '/images/door.jpg',
             repeatX: 1,

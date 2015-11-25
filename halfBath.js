@@ -23,7 +23,7 @@ function prepareHalfBath() {
     var doorHeight = roomHeight - doorPaddings.top;
 
     //back wall
-    gBuilding.wallUtil.addWallWithWindow(scene, roomWidth,roomHeight,dockX,-houseInfo.length/2, {
+    gBuilding.wallUtil.addWallWithWindow1(scene, roomWidth,roomHeight,new THREE.Vector3(dockX - roomWidth/2,roomHeight/2, -houseInfo.length/2), new THREE.Vector3(0,0,0),{
         left: 50,
         right: 50,
         top: 60,
@@ -31,15 +31,15 @@ function prepareHalfBath() {
     });
 
     //door wall
-    gBuilding.wallUtil.addWallWithWindow(scene,roomWidth,roomHeight,dockX,roomLength-houseInfo.length/2, doorPaddings);
+    gBuilding.wallUtil.addWallWithWindow1(scene,roomWidth,roomHeight,new THREE.Vector3(dockX - roomWidth/2,roomHeight/2,roomLength-houseInfo.length/2), new THREE.Vector3(0,0,0), doorPaddings);
 
 
-    gBuilding.wallUtil.addPlaneRotateByEdge(
+    gBuilding.wallUtil.addPlaneRotateByCenter(
         scene,
         doorWidth,
         doorHeight,
-        new THREE.Vector3(dockX-doorPaddings.right-doorWidth, doorHeight/2, -houseInfo.length/2 + roomLength),
-        new THREE.Vector3(-doorWidth/2, 0, 0),
+        5,
+        new THREE.Vector3(dockX-doorPaddings.right-doorWidth + doorWidth / 1.414 /2, doorHeight/2, -houseInfo.length/2 + roomLength - doorWidth / 1.414 /2),
         new THREE.Vector3(0,Math.PI * 5 /4, 0), {
         dir: '/images/door.jpg',
         repeatX: 1,

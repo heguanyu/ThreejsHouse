@@ -15,7 +15,7 @@ function prepareKitchen() {
 
     var dockX = houseInfo.width/2 - allObjects.dinningHall.width - allObjects.halfBath.width - 0.1;
     // backwall, has window
-    gBuilding.wallUtil.addWallWithWindow(scene, roomWidth,roomHeight,dockX, -houseInfo.length/2, {
+    gBuilding.wallUtil.addWallWithWindow1(scene, roomWidth,roomHeight,new THREE.Vector3(dockX-roomWidth/2, roomHeight/2, -houseInfo.length/2), new THREE.Vector3(0,0,0), {
         left: 80,
         right: 60,
         top: 30,
