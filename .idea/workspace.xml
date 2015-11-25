@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="playRoom.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="playRoom.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playRoom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47878128">
-              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -37,6 +37,28 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dinningHall.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dinningHall.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49727964">
+              <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="three.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/three.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14075" column="0" selection-start-line="14075" selection-start-column="0" selection-end-line="14075" selection-end-column="0" />
+              <folding>
+                <element signature="e#602707#603783#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,10 +95,10 @@
         <option value="$PROJECT_DIR$/lib/shad" />
         <option value="$PROJECT_DIR$/basic.js" />
         <option value="$PROJECT_DIR$/westHall.js" />
-        <option value="$PROJECT_DIR$/dinningHall.js" />
-        <option value="$PROJECT_DIR$/lib/three.js" />
         <option value="$PROJECT_DIR$/wall.js" />
         <option value="$PROJECT_DIR$/playRoom.js" />
+        <option value="$PROJECT_DIR$/lib/three.js" />
+        <option value="$PROJECT_DIR$/dinningHall.js" />
       </list>
     </option>
   </component>
@@ -190,13 +212,17 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
+    <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\gitprojects\threejshouse" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.three.js">
+    <configuration default="false" name="three.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/Program Files (x86)/nodejs/node" path-to-js-file="three.js" working-dir="$PROJECT_DIR$/lib">
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -235,6 +261,14 @@
       <envs />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.three.js" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.three.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -263,7 +297,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -595,41 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/three.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7980" column="13" selection-start-line="7980" selection-start-column="13" selection-end-line="7980" selection-end-column="13" />
-          <folding>
-            <element signature="e#446490#449430#0" expanded="false" />
-            <element signature="e#449445#453138#0" expanded="false" />
-            <element signature="e#457971#459796#0" expanded="false" />
-            <element signature="e#459810#461463#0" expanded="false" />
-            <element signature="e#461476#462590#0" expanded="false" />
-            <element signature="e#462604#463476#0" expanded="false" />
-            <element signature="e#463666#464556#0" expanded="false" />
-            <element signature="e#464750#465924#0" expanded="false" />
-            <element signature="e#466306#467904#0" expanded="false" />
-            <element signature="e#467925#469354#0" expanded="false" />
-            <element signature="e#474639#474804#0" expanded="false" />
-            <element signature="e#481202#483637#0" expanded="false" />
-            <element signature="e#483735#487701#0" expanded="false" />
-            <element signature="e#487779#490773#0" expanded="false" />
-            <element signature="e#490892#491198#0" expanded="false" />
-            <element signature="e#491244#491452#0" expanded="false" />
-            <element signature="e#597632#598646#0" expanded="false" />
-            <element signature="e#602725#603801#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dinningHall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40152338">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wall.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -640,8 +639,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playRoom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47878128">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/three.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14075" column="0" selection-start-line="14075" selection-start-column="0" selection-end-line="14075" selection-end-column="0" />
+          <folding>
+            <element signature="e#602707#603783#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dinningHall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49727964">
+          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
           <folding />
         </state>
       </provider>
