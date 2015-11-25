@@ -16,14 +16,14 @@ function preparePlayRoom() {
     var dockX = -houseInfo.width/2 + roomWidth;
     // backwall, has window
     var windowPaddings = {
-        left: 118,
-        right: 149.5,
+        left: 149.5,
+        right: 118,
         top: 40,
         bottom: 80
     }
     var doorPaddings = {
-        left: 0,
-        right: 24.5,
+        left: 24.5,
+        right: 0,
         top: 40,
         bottom: 0
     }
@@ -32,8 +32,8 @@ function preparePlayRoom() {
     var doorHeight = roomHeight - doorPaddings.top;
     var wall1Width = windowPaddings.left+windowWidth+windowPaddings.right;
     var wall2Width = doorPaddings.left+doorWidth+doorPaddings.right;
-    gBuilding.wallUtil.addWallWithWindow(scene, wall1Width,roomHeight,-houseInfo.width/2 + wall1Width, houseInfo.length/2, windowPaddings);
-    gBuilding.wallUtil.addWallWithWindow(scene, wall2Width ,roomHeight,-houseInfo.width/2 + wall1Width + wall2Width, houseInfo.length/2, doorPaddings);
+    gBuilding.wallUtil.addWallWithWindow1(scene, wall1Width,roomHeight, new THREE.Vector3((-houseInfo.width + wall1Width)/2, roomHeight/2, houseInfo.length/2), new THREE.Vector3(Math.PI, 0, Math.PI), windowPaddings);
+    gBuilding.wallUtil.addWallWithWindow1(scene, wall2Width,roomHeight, new THREE.Vector3((-houseInfo.width + wall2Width)/2 + wall1Width, roomHeight/2, houseInfo.length/2), new THREE.Vector3(Math.PI, 0, Math.PI), doorPaddings);
     gBuilding.wallUtil.addLeftRightWall(scene, roomDepth, roomHeight, -houseInfo.width/2, roomHeight/2, houseInfo.length/2 - roomDepth/2, gBuilding.wallUtil.getWallTexture(roomDepth, roomHeight));
 
     gBuilding.wallUtil.addPlaneRotateByEdge(

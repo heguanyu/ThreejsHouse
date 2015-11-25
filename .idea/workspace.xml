@@ -21,101 +21,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="house.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/house.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.612904">
-              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="westHall.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/westHall.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playRoom.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="playRoom.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playRoom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="171" selection-start-line="36" selection-start-column="164" selection-end-line="36" selection-end-column="171" />
+            <state vertical-scroll-proportion="0.47878128">
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="halfBath.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/halfBath.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="72" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dinningHall.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dinningHall.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="table_chairs.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meshes/table_chairs.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.586207">
-              <caret line="1041" column="26" selection-start-line="1041" selection-start-column="26" selection-end-line="1041" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kitchen.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kitchen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="three.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/three.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33256084">
-              <caret line="16696" column="49" selection-start-line="16696" selection-start-column="43" selection-end-line="16696" selection-end-column="49" />
-              <folding>
-                <element signature="e#474627#474792#0" expanded="false" />
-                <element signature="e#483723#487689#0" expanded="false" />
-                <element signature="e#487767#490761#0" expanded="false" />
-                <element signature="e#490880#491186#0" expanded="false" />
-                <element signature="e#491232#491440#0" expanded="false" />
-                <element signature="e#597604#598618#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/wall.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+              <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -154,17 +65,18 @@
         <option value="$PROJECT_DIR$/dinningHall" />
         <option value="$PROJECT_DIR$/basic.css" />
         <option value="$PROJECT_DIR$/planes.js" />
-        <option value="$PROJECT_DIR$/westHall.js" />
-        <option value="$PROJECT_DIR$/playRoom.js" />
         <option value="$PROJECT_DIR$/house.html" />
         <option value="$PROJECT_DIR$/meshes/treehouse_logo.js" />
         <option value="$PROJECT_DIR$/meshes/table_chairs.json" />
         <option value="$PROJECT_DIR$/halfBath.js" />
         <option value="$PROJECT_DIR$/kitchen.js" />
-        <option value="$PROJECT_DIR$/wall.js" />
-        <option value="$PROJECT_DIR$/dinningHall.js" />
+        <option value="$PROJECT_DIR$/lib/shad" />
         <option value="$PROJECT_DIR$/basic.js" />
+        <option value="$PROJECT_DIR$/westHall.js" />
+        <option value="$PROJECT_DIR$/dinningHall.js" />
         <option value="$PROJECT_DIR$/lib/three.js" />
+        <option value="$PROJECT_DIR$/wall.js" />
+        <option value="$PROJECT_DIR$/playRoom.js" />
       </list>
     </option>
   </component>
@@ -339,9 +251,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -633,34 +545,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/halfBath.js">
+    <entry file="file://$PROJECT_DIR$/lib/shad">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="72" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/westHall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playRoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="171" selection-start-line="36" selection-start-column="164" selection-end-line="36" selection-end-column="171" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
           <folding />
         </state>
       </provider>
@@ -668,15 +556,15 @@
     <entry file="file://$PROJECT_DIR$/kitchen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="35" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dinningHall.js">
+    <entry file="file://$PROJECT_DIR$/westHall.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -692,25 +580,69 @@
     <entry file="file://$PROJECT_DIR$/basic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/halfBath.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/three.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33256084">
-          <caret line="16696" column="49" selection-start-line="16696" selection-start-column="43" selection-end-line="16696" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7980" column="13" selection-start-line="7980" selection-start-column="13" selection-end-line="7980" selection-end-column="13" />
           <folding>
-            <element signature="e#474627#474792#0" expanded="false" />
-            <element signature="e#483723#487689#0" expanded="false" />
-            <element signature="e#487767#490761#0" expanded="false" />
-            <element signature="e#490880#491186#0" expanded="false" />
-            <element signature="e#491232#491440#0" expanded="false" />
-            <element signature="e#597604#598618#0" expanded="false" />
+            <element signature="e#446490#449430#0" expanded="false" />
+            <element signature="e#449445#453138#0" expanded="false" />
+            <element signature="e#457971#459796#0" expanded="false" />
+            <element signature="e#459810#461463#0" expanded="false" />
+            <element signature="e#461476#462590#0" expanded="false" />
+            <element signature="e#462604#463476#0" expanded="false" />
+            <element signature="e#463666#464556#0" expanded="false" />
+            <element signature="e#464750#465924#0" expanded="false" />
+            <element signature="e#466306#467904#0" expanded="false" />
+            <element signature="e#467925#469354#0" expanded="false" />
+            <element signature="e#474639#474804#0" expanded="false" />
+            <element signature="e#481202#483637#0" expanded="false" />
+            <element signature="e#483735#487701#0" expanded="false" />
+            <element signature="e#487779#490773#0" expanded="false" />
+            <element signature="e#490892#491198#0" expanded="false" />
+            <element signature="e#491244#491452#0" expanded="false" />
+            <element signature="e#597632#598646#0" expanded="false" />
+            <element signature="e#602725#603801#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dinningHall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40152338">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playRoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47878128">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

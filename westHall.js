@@ -15,13 +15,12 @@ function prepareWestHall() {
 
     var dockX = -houseInfo.width/2 + roomWidth;
     // backwall, has window
-    gBuilding.wallUtil.addWallWithWindow(scene, roomWidth,roomHeight,dockX, -houseInfo.length/2, {
+    var topWall = gBuilding.wallUtil.addWallWithWindow(scene, roomWidth,roomHeight,dockX, -houseInfo.length/2, {
         left: 20,
         right: 10,
         top: 20,
         bottom: 0
     });
-
 
     gBuilding.wallUtil.addLeftRightWall(scene, 232, roomHeight, dockX - roomWidth, roomHeight/2, -houseInfo.length/2 + 232/2,gBuilding.wallUtil.getWallTexture(232, roomHeight, {
         x: (roomDepth-232)/roomDepth, y: 0, w: 232/roomDepth, h: 1

@@ -62,13 +62,13 @@ function init()
     container.appendChild( stats.domElement );
 
     // LIGHT
-    var ambientLight = new THREE.AmbientLight( 0x303030 ); // soft white light
+    var ambientLight = new THREE.AmbientLight( 0x808080 ); // soft white light
     scene.add( ambientLight );
 
-    var sunLight = new THREE.DirectionalLight( 0xffffff, 0.2 );
+    var sunLight = new THREE.DirectionalLight( 0xffffff, 1 );
     sunLight.position.set( 600, 1000, -1000 );
     sunLight.castShadow = true;
-    sunLight.shadowDarkness = 1;
+    sunLight.shadowDarkness = 0.5;
     scene.add( sunLight );
 
 

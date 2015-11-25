@@ -29,7 +29,6 @@ function prepareDiningHall() {
     var degbugwall = gBuilding.wallUtil.addLeftRightWall(scene, 87, roomHeight, dockX - roomWidth, roomHeight/2, -houseInfo.length/2 + 164 + 96 + 87 / 2,gBuilding.wallUtil.getWallTexture(87, roomHeight,{
         x: 0, y: 0, w: 87/roomDepth, h: 1
     }));//left to stair
-    console.log(degbugwall);
 
     gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, 345, dockX-roomWidth/2, roomHeight, -houseInfo.length/2 + 345/2, {
         dir: 'images/popcorn.jpg',
@@ -44,12 +43,14 @@ function prepareDiningHall() {
             addPointLight(new THREE.Vector3(lightXs[i], roomHeight - 2, lightZs[j]), 3, 0xffffff, 0.1, 1000, allObjects.dinningHall.lightGroup);
         }
     }
-    var spotLight = new THREE.SpotLight( 0xffffff, 0.5, 500, Math.PI/2.1, 1 );
+    var spotLight = new THREE.SpotLight( 0xffffff, 1.0, 100, Math.PI/5, 1 );
     spotLight.position.set( 280, roomHeight-10, -170 );
     spotLight.target.position.set( 280, roomHeight-100, -170 );
     spotLight.target.updateMatrixWorld();
     spotLight.castShadow = true;
-    spotLight.shadowCameraFov = 360 / 2.1;
+    spotLight.shadowDarkness = 0.2;
+    spotLight.shadowCameraFar = roomHeight;
+    spotLight.shadowCameraFov = 360 / 5;
     scene.add( spotLight );
     var spotlightShadowHelper = new THREE.CameraHelper( spotLight.shadow.camera );
     scene.add( spotlightShadowHelper );
