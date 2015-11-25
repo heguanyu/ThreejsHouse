@@ -95,14 +95,13 @@ function buildNorthPlatform(leftDock, topDock) {
         }
     ];
 
+    var textureLoader = new THREE.TextureLoader()
+    var textureCube = textureLoader.load("images/marble.jpg" );
+    var marbleMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff, map: textureCube, specular: 0xffffff } );
 
     for(var i = 0; i < boards.length; i++) {
         var board = boards[i];
         var geometry = new THREE.BoxGeometry( board.width, thickness, board.depth);
-
-        var textureCube = THREE.ImageUtils.loadTexture("images/marble.jpg" );
-        var marbleMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff, map: textureCube, specular: 0xffffff } );
-
         var cube = new THREE.Mesh( geometry, marbleMaterial );
         cube.position.set(board.left + board.width / 2, platform1.height, board.top + board.depth/2 );
         scene.add( cube );

@@ -55,4 +55,11 @@ function prepareHalfBath() {
             addPointLight(new THREE.Vector3(lightXs[i], roomHeight - 2, lightZs[j]), 3, 0xffffff, 0.3, 500, allObjects.halfBath.lightGroup);
         }
     }
+
+    var spotLight = new THREE.SpotLight( 0xffffff, 0.5, 2000, Math.PI/2.1, 1 );
+    spotLight.position.set( lightXs[0], roomHeight-10, lightZs[0] );
+    spotLight.target.position.set( lightXs[0], roomHeight-100, lightZs[0] );
+    spotLight.target.updateMatrixWorld();
+    spotLight.castShadow = true;
+    //scene.add( spotLight );
 }

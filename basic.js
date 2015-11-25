@@ -39,9 +39,9 @@ function init()
         renderer = new THREE.CanvasRenderer();
     renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
     //SHADOW MAP
-    renderer.shadowMapEnabled = true;
-    renderer.shadowMapType = THREE.PCFSoftShadowMap;
-    renderer.shadowMapDebug = true;
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.shadowMap.debug = true;
 
     container = document.getElementById( '_myCanvas' );
     container.appendChild( renderer.domElement );
@@ -65,18 +65,25 @@ function init()
     var ambientLight = new THREE.AmbientLight( 0x303030 ); // soft white light
     scene.add( ambientLight );
 
-    var sunLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
-    sunLight.position.set( 300, 1000, -500 );
+    var sunLight = new THREE.DirectionalLight( 0xffffff, 0.2 );
+    sunLight.position.set( 600, 1000, -1000 );
     sunLight.castShadow = true;
     sunLight.shadowDarkness = 1;
-    sunLight.shadowCameraVisible = true;
     scene.add( sunLight );
 
+
     //addPointLight(new THREE.Vector3(0,150,0), 0, 0xffffff, 0.1, 4000);
+    var textureLoader = new THREE.TextureLoader();
+    var tileFloorTexture = textureLoader.load("images/jade.jpg");
+    tileFloorTexture.wrapS = tileFloorTexture.wrapT = THREE.RepeatWrapping;
+    tileFloorTexture.repeat.set(
+        10 || 1,
+        10 || 1
+    );
+    var tileFloorMaterial = new THREE.MeshPhongMaterial( { map: tileFloorTexture, side: THREE.FrontSide, specular: 0x030303 });
+
     gBuilding.wallUtil.addFloorCeiling(scene, houseInfo.width, houseInfo.length, 0, 0, 0, {
-        dir: "images/jade.jpg",
-        repeatX: 10,
-        repeatY: 10,
+        material: tileFloorMaterial,
         castShadow: false,
         receiveShadow: true
     });
@@ -104,9 +111,11 @@ function addPointLight(pos, radius, color, intense, decay, lightGroup) {
     // LIGHT
     var light = new THREE.PointLight(color, intense, decay);
     light.add( new THREE.Mesh( new THREE.SphereGeometry( radius || 0.00000001, 16, 8 ), new THREE.MeshBasicMaterial( { color: color } ) ) );
+    light = new THREE.Mesh( new THREE.SphereGeometry( radius || 0.00000001, 16, 8 ), new THREE.MeshBasicMaterial( { color: color } ) );
     light.position.set(pos.x, pos.y, pos.z);
     light.originIntense = intense;
     scene.add(light);
+
     if (lightGroup) {
         lightGroup.push(light);
     }
