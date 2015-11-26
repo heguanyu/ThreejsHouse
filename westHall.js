@@ -15,12 +15,12 @@ function prepareWestHall() {
 
     var dockX = -houseInfo.width/2 + roomWidth;
     // backwall, has window
-    /*gBuilding.wallUtil.addWallWithWindow1(scene, roomWidth,roomHeight,new THREE.Vector3(dockX - roomWidth/2,roomHeight/2, -houseInfo.length/2), new THREE.Vector3(0,0,0),{
+    gBuilding.wallUtil.addWallWithWindow1(scene, roomWidth,roomHeight,new THREE.Vector3(dockX - roomWidth/2,roomHeight/2, -houseInfo.length/2), new THREE.Vector3(0,0,0),{
         left: 20,
         right: 10,
         top: 20,
         bottom: 0
-    });*/
+    });
 
     gBuilding.wallUtil.addWallWithWindow1(scene, roomDepth,roomHeight,new THREE.Vector3(-houseInfo.width/2,roomHeight/2, -houseInfo.length/2 + roomDepth/2), new THREE.Vector3(0,Math.PI/2,0),{
         left: 25,
@@ -29,9 +29,5 @@ function prepareWestHall() {
         bottom: 0
     });
 
-    gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, roomDepth, dockX-roomWidth/2, roomHeight, -houseInfo.length/2 + roomDepth/2, {
-        dir: 'images/popcorn.jpg',
-        repeatX: 7,
-        repeatY: 7
-    });
+    gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, roomDepth, dockX-roomWidth/2, roomHeight, -houseInfo.length/2 + roomDepth/2, gBuilding.commonMaterials.getCeilingTexture(roomWidth, roomDepth));
 }

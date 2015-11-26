@@ -22,13 +22,9 @@ function prepareKitchen() {
         bottom: 120
     });
 
-    gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, 345, dockX-roomWidth/2, roomHeight, -houseInfo.length/2 + 345/2, {
-        dir: 'images/popcorn.jpg',
-        repeatX: 7,
-        repeatY: 7
-    });
+    gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, 345, dockX-roomWidth/2, roomHeight, -houseInfo.length/2 + 345/2, gBuilding.commonMaterials.getCeilingTexture(roomWidth, 345));
     buildNorthPlatform(dockX - roomWidth, -houseInfo.length/2 + 0.1);
-    gBuilding.wallUtil.addFrontBackWall(scene,roomWidth,roomHeight,dockX-roomWidth/2,roomHeight/2,-houseInfo.depth / 2 + roomDepth, gBuilding.wallUtil.getWallTexture(roomWidth,roomHeight));
+    gBuilding.wallUtil.addFrontBackWall(scene,roomWidth,roomHeight,dockX-roomWidth/2,roomHeight/2,-houseInfo.depth / 2 + roomDepth, gBuilding.commonMaterials.getWallTexture(roomWidth,roomHeight));
     var lightXs = [ -210, -100];
     var lightZs = [-290, -170, -50]
     for(var i = 0;i < lightXs.length; i++) {

@@ -3,21 +3,20 @@
  */
 
 var gBuilding = gBuilding || {};
-var wallMaterial;
 gBuilding.wallUtil = {
     addWallWithWindow1: function(scene, wallWidth, wallHeight,centerTranslation, centerRotation, windowPaddings) {
         var wall = new THREE.Object3D();
         var windowWidth = wallWidth - windowPaddings.left - windowPaddings.right;
-        gBuilding.wallUtil.addWall(wall,windowPaddings.left, wallHeight,new THREE.Vector3(-(wallWidth - windowPaddings.left)/2,0,0), new THREE.Vector3(0,0,0) ,gBuilding.wallUtil.getWallTexture(windowPaddings.left, wallHeight,{
+        gBuilding.wallUtil.addWall(wall,windowPaddings.left, wallHeight,new THREE.Vector3(-(wallWidth - windowPaddings.left)/2,0,0), new THREE.Vector3(0,0,0) ,gBuilding.commonMaterials.getWallTexture(windowPaddings.left, wallHeight,{
             x: 0, y: 0, w: windowPaddings.left/wallWidth, h: 1
         })); //left
-        gBuilding.wallUtil.addWall(wall,windowPaddings.right, wallHeight,new THREE.Vector3((wallWidth - windowPaddings.right)/2,0,0), new THREE.Vector3(0,0,0),gBuilding.wallUtil.getWallTexture(windowPaddings.right, wallHeight, {
+        gBuilding.wallUtil.addWall(wall,windowPaddings.right, wallHeight,new THREE.Vector3((wallWidth - windowPaddings.right)/2,0,0), new THREE.Vector3(0,0,0),gBuilding.commonMaterials.getWallTexture(windowPaddings.right, wallHeight, {
             x: 1-windowPaddings.right/wallWidth, y: 0, w: windowPaddings.right/wallWidth, h: 1
         })); //right
-        gBuilding.wallUtil.addWall(wall,windowWidth, windowPaddings.top,new THREE.Vector3(wallWidth/2 - windowPaddings.right - windowWidth/2,(wallHeight-windowPaddings.top)/2,0), new THREE.Vector3(0,0,0),gBuilding.wallUtil.getWallTexture(windowWidth, windowPaddings.top, {
+        gBuilding.wallUtil.addWall(wall,windowWidth, windowPaddings.top,new THREE.Vector3(wallWidth/2 - windowPaddings.right - windowWidth/2,(wallHeight-windowPaddings.top)/2,0), new THREE.Vector3(0,0,0),gBuilding.commonMaterials.getWallTexture(windowWidth, windowPaddings.top, {
             x: windowPaddings.left/wallWidth, y: 1-windowPaddings.top/wallHeight, w: windowWidth/wallWidth, h: windowPaddings.top/wallHeight
         })); //top
-        gBuilding.wallUtil.addWall(wall,windowWidth, windowPaddings.bottom, new THREE.Vector3(wallWidth/2 - windowPaddings.right - windowWidth/2,-(wallHeight-windowPaddings.bottom)/2,0), new THREE.Vector3(0,0,0),gBuilding.wallUtil.getWallTexture(windowWidth, windowPaddings.bottom,{
+        gBuilding.wallUtil.addWall(wall,windowWidth, windowPaddings.bottom, new THREE.Vector3(wallWidth/2 - windowPaddings.right - windowWidth/2,-(wallHeight-windowPaddings.bottom)/2,0), new THREE.Vector3(0,0,0),gBuilding.commonMaterials.getWallTexture(windowWidth, windowPaddings.bottom,{
             x: windowPaddings.left/wallWidth, y: 0, w: windowWidth/wallWidth, h: windowPaddings.bottom/wallHeight
         })); //bottom
         wall.rotation.set(centerRotation.x, centerRotation.y, centerRotation.z);
@@ -36,24 +35,6 @@ gBuilding.wallUtil = {
     },
     addWall: function(parent, width, height, centerTranslation, centerRotation, textureInfo) {
         return gBuilding.wallUtil.addPlaneRotateByCenter(parent, width, height, 7, centerTranslation, centerRotation, textureInfo)
-    },
-    getWallTexture: function(width, height, uvMapping) {
-        if (!wallMaterial) {
-            var textureLoader = new THREE.TextureLoader();
-            var texture = textureLoader.load('images/paintedwall.jpg');
-            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-            texture.repeat.set(
-                Math.max(Math.floor(width/500), 1),
-                Math.max(Math.floor(height/500), 1)
-            );
-            wallMaterial = new THREE.MeshPhongMaterial( { map: texture, side: THREE.FrontSide, specular: 0x030303 });
-        }
-        return {
-            material: wallMaterial,
-            uvMapping: uvMapping,
-            castShadow: true,
-            receiveShadow: false
-        }
     },
 
     addPlaneRotateByCenter: function(parent, width, height, thickness, centerTranslation, centerRotation, textureInfo) {

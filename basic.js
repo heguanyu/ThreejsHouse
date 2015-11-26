@@ -82,11 +82,14 @@ function init()
     );
     var tileFloorMaterial = new THREE.MeshPhongMaterial( { map: tileFloorTexture, side: THREE.FrontSide, specular: 0x030303 });
 
-    gBuilding.wallUtil.addFloorCeiling(scene, houseInfo.width, houseInfo.length, 0, 0, 0, {
+    var floor1 = gBuilding.wallUtil.addFloorCeiling(scene, houseInfo.width * 2, houseInfo.length * 2, 0, 0, 0, {
         material: tileFloorMaterial,
+        repeatX: 30,
+        repeatY: 30,
         castShadow: false,
         receiveShadow: true
     });
+    floor1.rotation.set(Math.PI/2,0,Math.PI/4);
     // SKYBOX/FOG
     var skyBoxGeometry = new THREE.BoxGeometry( 10000, 10000, 10000 );
     var skyBoxMaterial = new THREE.MeshBasicMaterial( { color: 0x9999ff, side: THREE.BackSide } );
@@ -106,6 +109,7 @@ function prepareFirstFloor() {
     prepareKitchen();
     prepareWestHall();
     preparePlayRoom();
+    prepareStairs();
 }
 function addPointLight(pos, radius, color, intense, decay, lightGroup) {
     // LIGHT
