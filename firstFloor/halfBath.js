@@ -49,6 +49,10 @@ function prepareHalfBath() {
     gBuilding.wallUtil.addLeftRightWall(scene, roomDepth, roomHeight, dockX - roomWidth, roomHeight/2, -houseInfo.length/2 + roomDepth/2,gBuilding.commonMaterials.getWallTexture(roomDepth,roomHeight));//left to back
     gBuilding.wallUtil.addFrontBackWall(scene,roomWidth,roomHeight,dockX-roomWidth/2,roomHeight/2,-houseInfo.depth / 2 + roomDepth, gBuilding.commonMaterials.getWallTexture(roomWidth,roomHeight));
     gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, roomDepth, dockX-roomWidth/2, roomHeight, -houseInfo.length/2 + roomDepth/2, gBuilding.commonMaterials.getCeilingTexture(roomWidth, roomDepth));
+    // add passway ceiling
+    var passwayDepth = 183;
+    gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, passwayDepth, dockX-roomWidth/2, roomHeight, -houseInfo.length/2 + roomDepth + passwayDepth/2, gBuilding.commonMaterials.getCeilingTexture(roomWidth, passwayDepth));
+
     var lightXs = [dockX - roomWidth / 2];
     var lightZs = [-houseInfo.length / 2 + roomDepth/2]
     for(var i = 0;i < lightXs.length; i++) {

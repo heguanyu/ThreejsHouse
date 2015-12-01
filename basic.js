@@ -28,7 +28,7 @@ function init()
     scene = new THREE.Scene();
     // CAMERA
     var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight;
-    var VIEW_ANGLE = 75, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 10000;
+    var VIEW_ANGLE = 90, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 10000;
     camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
     scene.add(camera);
     resetCamera();
@@ -65,7 +65,7 @@ function init()
     var ambientLight = new THREE.AmbientLight( 0x808080 ); // soft white light
     scene.add( ambientLight );
 
-    var sunLight = new THREE.DirectionalLight( 0xffffff, 1 );
+    var sunLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
     sunLight.position.set( 600, 1000, -1000 );
     sunLight.castShadow = true;
     sunLight.shadowDarkness = 0.5;
@@ -77,15 +77,13 @@ function init()
     var tileFloorTexture = textureLoader.load("images/jade.jpg");
     tileFloorTexture.wrapS = tileFloorTexture.wrapT = THREE.RepeatWrapping;
     tileFloorTexture.repeat.set(
-        10 || 1,
-        10 || 1
+        40 || 1,
+        30 || 1
     );
     var tileFloorMaterial = new THREE.MeshPhongMaterial( { map: tileFloorTexture, side: THREE.FrontSide, specular: 0x030303 });
 
     var floor1 = gBuilding.wallUtil.addFloorCeiling(scene, houseInfo.width * 2, houseInfo.length * 2, 0, 0, 0, {
         material: tileFloorMaterial,
-        repeatX: 30,
-        repeatY: 30,
         castShadow: false,
         receiveShadow: true
     });
@@ -110,6 +108,7 @@ function prepareFirstFloor() {
     prepareWestHall();
     preparePlayRoom();
     prepareStairs();
+    prepareEastHall();
 }
 function addPointLight(pos, radius, color, intense, decay, lightGroup) {
     // LIGHT
