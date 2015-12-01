@@ -47,8 +47,8 @@ function prepareMainBed() {
 
     //doorway
     gBuilding.wallUtil.addWallWithWindow1(scene, roomDepth,roomHeight,new THREE.Vector3(dockX - roomWidth,roomAltitude + roomHeight/2, -houseInfo.length/2 + roomDepth/2 - 33), new THREE.Vector3(0,Math.PI/2,0),{
-        left: 24,
-        right: 263,
+        left: 4,
+        right: roomDepth - 4 - 90,
         top: 50,
         bottom: 0
     });
