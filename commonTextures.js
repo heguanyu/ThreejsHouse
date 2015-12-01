@@ -42,4 +42,43 @@ gBuilding.commonMaterials = {
             receiveShadow: false
         }
     },
+
+    getBathFloorTileTexture: function(width, depth, uvMapping) {
+        if (!this.bathFloorTileMaterial) {
+            var textureLoader = new THREE.TextureLoader();
+            var texture = textureLoader.load('images/brazil_arena.jpg');
+            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+            texture.repeat.set(
+                Math.max(Math.floor(width/50), 1),
+                Math.max(Math.floor(depth/50), 1)
+            );
+            this.bathFloorTileMaterial = new THREE.MeshPhongMaterial( { map: texture, side: THREE.FrontSide, specular: 0x050505 });
+        }
+        return {
+            material: this.bathFloorTileMaterial,
+            uvMapping: uvMapping,
+            castShadow: true,
+            receiveShadow: false
+        }
+
+    },
+
+    getCarpetTexture: function(width, depth, uvMapping) {
+        if (!this.carpetMaterial) {
+            var textureLoader = new THREE.TextureLoader();
+            var texture = textureLoader.load('images/carpet.jpg');
+            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+            texture.repeat.set(
+                Math.max(Math.floor(width/50), 1),
+                Math.max(Math.floor(depth/50), 1)
+            );
+            this.carpetMaterial = new THREE.MeshLambertMaterial( { map: texture, side: THREE.FrontSide, specular: 0x050505 });
+        }
+        return {
+            material: this.carpetMaterial,
+            uvMapping: uvMapping,
+            castShadow: true,
+            receiveShadow: false
+        }
+    }
 }

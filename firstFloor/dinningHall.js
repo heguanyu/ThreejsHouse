@@ -60,7 +60,7 @@ function prepareDiningHall() {
             object.scale.set(100,100,100);
             object.position.set(277, 10, -142);
             object.rotation.set(0, Math.PI/2, 0);
-            scene.add( object );  
+            scene.add( object );
         }
     );
 

@@ -28,7 +28,7 @@ function init()
     scene = new THREE.Scene();
     // CAMERA
     var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight;
-    var VIEW_ANGLE = 90, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 10000;
+    var VIEW_ANGLE = 60, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 10000;
     camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
     scene.add(camera);
     resetCamera();
@@ -99,6 +99,7 @@ function init()
     // CUSTOM //
     ////////////
     prepareFirstFloor();
+    prepareSecondFloor();
 }
 
 function prepareFirstFloor() {
@@ -109,6 +110,12 @@ function prepareFirstFloor() {
     preparePlayRoom();
     prepareStairs();
     prepareEastHall();
+}
+
+function prepareSecondFloor() {
+    prepareMainBath();
+    prepareMainBed();
+    prepareSecondBed();
 }
 function addPointLight(pos, radius, color, intense, decay, lightGroup) {
     // LIGHT
@@ -126,8 +133,8 @@ function addPointLight(pos, radius, color, intense, decay, lightGroup) {
 
 function resetCamera() {
     if (DEBUGMODE) {
-        camera.position.set(493.68798982071854,150,33.3706083989199);
-        camera.rotation.set(-3.141592653589793,1.2422721820825926,-3.141592653589793);
+        camera.position.set(-276.4770223873056,391.7025,370.39280699426905);
+        camera.rotation.set(0,0.06095,0);
     }
     else {
         camera.position.set(0,150,700);
