@@ -27,7 +27,7 @@ function prepareSecondBed() {
 
     gBuilding.wallUtil.addWall(scene, roomDepth, roomHeight, new THREE.Vector3(dockX-roomWidth, roomAltitude + roomHeight/2, dockZ + roomDepth/2), new THREE.Vector3(0,Math.PI/2,0), gBuilding.commonMaterials.getWallTexture(roomDepth, roomHeight));
     gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, roomDepth, dockX-roomWidth/2, roomAltitude + roomHeight, dockZ + roomDepth/2, gBuilding.commonMaterials.getCeilingTexture(roomWidth, roomDepth));
-    gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, roomDepth, dockX-roomWidth/2, roomAltitude, dockZ + roomDepth/2, gBuilding.commonMaterials.getBathFloorTileTexture(roomWidth, roomDepth));
+    gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, roomDepth, dockX-roomWidth/2, roomAltitude, dockZ + roomDepth/2, gBuilding.commonMaterials.getWoodFloorTileTexture(roomWidth, roomDepth));
 
     //closet
     var closetDepth = 72;

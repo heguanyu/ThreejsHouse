@@ -37,13 +37,13 @@ function prepareMainBed() {
 
 
     gBuilding.wallUtil.addWallWithWindow1(scene, roomDepth,roomHeight,new THREE.Vector3(dockX,roomAltitude + roomHeight/2, -houseInfo.length/2 + roomDepth/2 - 33), new THREE.Vector3(0,-Math.PI/2,0),{
-        left: 24,
-        right: 265,
+        left: 114,
+        right: 175,
         top: 50,
         bottom: 0
     });
     gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, roomDepth, dockX-roomWidth/2, roomAltitude + roomHeight, -houseInfo.length/2 -33 + roomDepth/2, gBuilding.commonMaterials.getCeilingTexture(roomWidth, roomDepth));
-    gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, roomDepth, dockX-roomWidth/2, roomAltitude, -houseInfo.length/2 -33 + roomDepth/2, gBuilding.commonMaterials.getCarpetTexture(roomWidth, roomDepth));
+    gBuilding.wallUtil.addFloorCeiling(scene, roomWidth, roomDepth, dockX-roomWidth/2, roomAltitude, -houseInfo.length/2 -33 + roomDepth/2, gBuilding.commonMaterials.getWoodFloorTileTexture(roomWidth, roomDepth));
 
     //doorway
     gBuilding.wallUtil.addWallWithWindow1(scene, roomDepth,roomHeight,new THREE.Vector3(dockX - roomWidth,roomAltitude + roomHeight/2, -houseInfo.length/2 + roomDepth/2 - 33), new THREE.Vector3(0,Math.PI/2,0),{

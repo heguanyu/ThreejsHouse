@@ -110,12 +110,16 @@ function prepareFirstFloor() {
     preparePlayRoom();
     prepareStairs();
     prepareEastHall();
+
+    prepareFirstFloorMisc()
 }
 
 function prepareSecondFloor() {
     prepareMainBath();
     prepareMainBed();
     prepareSecondBed();
+    prepareSecondBath();
+    prepareReadingRoom();
 }
 function addPointLight(pos, radius, color, intense, decay, lightGroup) {
     // LIGHT
@@ -133,8 +137,8 @@ function addPointLight(pos, radius, color, intense, decay, lightGroup) {
 
 function resetCamera() {
     if (DEBUGMODE) {
-        camera.position.set(-276.4770223873056,391.7025,370.39280699426905);
-        camera.rotation.set(0,0.06095,0);
+        camera.position.set(311.90024233818457,99.67249999999899,158.22910037639005);
+        camera.rotation.set(0,1.35,0);
     }
     else {
         camera.position.set(0,150,700);

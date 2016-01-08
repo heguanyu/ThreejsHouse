@@ -20,8 +20,8 @@ function prepareMainBath() {
     gBuilding.wallUtil.addFrontBackWall(scene, roomWidth, roomHeight, dockX - roomWidth/2, roomAltitude + roomHeight/2, -houseInfo.length/2 - 33, gBuilding.commonMaterials.getWallTexture(roomWidth, roomHeight));
     gBuilding.wallUtil.addFrontBackWall(scene, roomWidth, roomHeight, dockX - roomWidth/2, roomAltitude + roomHeight/2, -houseInfo.length/2 - 33 + roomDepth, gBuilding.commonMaterials.getWallTexture(roomWidth, roomHeight));
     gBuilding.wallUtil.addWallWithWindow1(scene, roomDepth,roomHeight,new THREE.Vector3(dockX - roomWidth,roomAltitude + roomHeight/2, -houseInfo.length/2 + roomDepth/2 - 33), new THREE.Vector3(0,Math.PI/2,0),{
-        left: 265,
-        right: 24,
+        left: 175,
+        right: 114,
         top: 50,
         bottom: 0
     });

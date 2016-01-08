@@ -51,17 +51,5 @@ function prepareDiningHall() {
     var spotlightShadowHelper = new THREE.CameraHelper( spotLight.shadow.camera );
     scene.add( spotlightShadowHelper );
 
-    var loader = new THREE.ObjectLoader();
-
-    // load a resource
-    loader.load(
-        'meshes/table_chairs.json',
-        function ( object ) {
-            object.scale.set(100,100,100);
-            object.position.set(277, 10, -142);
-            object.rotation.set(0, Math.PI/2, 0);
-            scene.add( object );
-        }
-    );
 
 }

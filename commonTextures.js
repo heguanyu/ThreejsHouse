@@ -63,6 +63,26 @@ gBuilding.commonMaterials = {
 
     },
 
+    getWoodFloorTileTexture: function(width, depth, uvMapping) {
+        if (!this.woodFloorMaterial) {
+            var textureLoader = new THREE.TextureLoader();
+            var texture = textureLoader.load('images/woodfloor.jpg');
+            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+            texture.repeat.set(
+                Math.max(Math.floor(width/50), 1),
+                Math.max(Math.floor(depth/50), 1)
+            );
+            this.woodFloorMaterial = new THREE.MeshPhongMaterial( { map: texture, side: THREE.FrontSide, specular: 0x050505 });
+        }
+        return {
+            material: this.woodFloorMaterial,
+            uvMapping: uvMapping,
+            castShadow: true,
+            receiveShadow: false
+        }
+
+    },
+
     getCarpetTexture: function(width, depth, uvMapping) {
         if (!this.carpetMaterial) {
             var textureLoader = new THREE.TextureLoader();
